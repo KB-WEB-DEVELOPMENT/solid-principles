@@ -33,34 +33,33 @@ use PHPUnit\Framework\TestCase;
 final class WealthTest extends TestCase
 {
     public function subtypeMethodArgIsContravariant(): void
-    {
-		
-		$method = new ReflectionMethod(GrandFatherClass::class,'getWealth');
+    {	
+	$method = new ReflectionMethod(GrandFatherClass::class,'getWealth');
 
-		$params = $method->getParameters();
+	$params = $method->getParameters();
 
-		$method_args_types_array = [];
+	$method_args_types_array = [];
 
-		foreach ($params as $param) {
-			$method_args_types_array[] = $param->getName()->getType();
-		}
-		
-		$boolResult = is_subclass_of($method_args_types_array[0],FamilyInterface::class);
-		
-		$this->assertTrue($boolResult);
-
+	foreach ($params as $param) {
+		$method_args_types_array[] = $param->getName()->getType();
 	}
+		
+	$boolResult = is_subclass_of($method_args_types_array[0],FamilyInterface::class);
+		
+	$this->assertTrue($boolResult);
+
+    }
 
     public function subtypeMethodReturnTypeIsCovariant(): void
     {
-		$fc = new FatherClass();	   
+	$fc = new FatherClass();	   
 		
-		$gfw =  new GrandFatherWealth();
+	$gfw =  new GrandFatherWealth();
 		
-		$res = $fc->getWealth($gfw);
+	$res = $fc->getWealth($gfw);
 		
-		$boolResult = is_subclass_of($res,FamilyWealth::class);
+	$boolResult = is_subclass_of($res,FamilyWealth::class);
 
-		$this->assertTrue($boolResult);
-	}
+	$this->assertTrue($boolResult);
+   }
 }
