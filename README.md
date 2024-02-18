@@ -1,7 +1,6 @@
 This repository shows my own implemented examples  of the 5 <b>SOLID design principles</b> used in software engineering.
 
-These 5 design principles are intended to make object-oriented designs more understandable, flexible  
-and maintainable.
+These 5 design principles are intended to make object-oriented designs more understandable, flexible  and maintainable.
 
 The 5 SOLID design principles are the:
 
