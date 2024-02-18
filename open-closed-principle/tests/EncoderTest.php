@@ -16,25 +16,24 @@ final class EncoderTest extends TestCase
 {
     public function canEncodeString(): void
     {
-		$factory = new EncoderFactory();
-		$encoder = (new GenericEncoder($factory))->createEncoderForFormat('url');
+	$factory = new EncoderFactory();
+	$encoder = (new GenericEncoder($factory))->createEncoderForFormat('url');
 		
-		$str = $encoder->encode('K â m i');
+	$str = $encoder->encode('K â m i');
 
-		$exp = 'K+%C3%A2+m+i';
+	$exp = 'K+%C3%A2+m+i';
 
-		$this->assertSame($str,$exp);
+	$this->assertSame($str,$exp);
 
-	}
+    }
 
     public function cannotFindEncoder(): void
     {
         $factory = new EncoderFactory();
-		$encoder = (new GenericEncoder($factory))->createEncoderForFormat('wrong encoder');
+	$encoder = (new GenericEncoder($factory))->createEncoderForFormat('wrong encoder');
 		
-		$str = $encoder->encode('K â m i'); 
+	$str = $encoder->encode('K â m i'); 
 	
-		  $this->expectException(InvalidArgumentException::class);
-	}
-
+	 $this->expectException(InvalidArgumentException::class);
+   }
 }
