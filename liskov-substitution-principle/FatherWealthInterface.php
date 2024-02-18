@@ -1,7 +1,6 @@
 <?php
 /*
-We attempt to illustrate the Liskov substitution principle keeping
-in mind the following three characteristics of this principle: 
+We attempt to illustrate the Liskov substitution principle keeping in mind the following three characteristics of this principle: 
 
 1. Method arguments of the subtype should be contravariant.
 2  Method return types of the subtype should be covariant.
