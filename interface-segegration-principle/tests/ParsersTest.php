@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace myTests;
 
-use myClasses\CsvParserInterface
-use myClasses\XmlParserInterface
+use myClasses\CsvParserInterface;
+use myClasses\XmlParserInterface;
 use myClasses\CsvParser;
 use myClasses\MultiFormatParser;
 
@@ -19,7 +19,7 @@ final class ParsersTest extends TestCase
 	Because of time constraints, I will refrain from writing all tests here.
 	The ideas are the same as all tests in this repository.
 	
-	In particular, we want to test to run the following tests.
+	In particular, we want to run the following tests.
 	
 	- test we can open a valid csv file and cannot open an invalid csv file
 	- test we can read a valid line in a valid csv file
