@@ -41,8 +41,9 @@ final class MultiFormatParser implements CsvParserInterface,XmlParserInterface
 				  $this->configCsvLineRead['length'],
 				  $this->configCsvLineRead['separator'],
 				  $this->configCsvLineRead['enclosure'],
-				  $this->configCsvLineRead['escape']);								
-				 $this->parsedCsvArray[] = $data;												
+				  $this->configCsvLineRead['escape']
+		      );								
+		      $this->parsedCsvArray[] = $data;												
 		}
 
 	     } catch (Exception $e) {
