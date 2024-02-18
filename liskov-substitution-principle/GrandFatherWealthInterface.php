@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace myClasses;
 
-interface GrandFatherWealthInteface extends FamilyWealthInterface
+interface GrandFatherWealthInterface extends FamilyWealthInterface
 {
     public function getWealth(FamilyWealthInteface $familyWealth): FamilyWealth;
 }
