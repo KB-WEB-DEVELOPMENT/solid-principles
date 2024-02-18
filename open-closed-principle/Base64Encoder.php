@@ -5,8 +5,8 @@ namespace myClasses;
 
 final class Base64Encoder implements EncoderInterface
 {	
-	private function encode(string $data): string
+    private function encode(string $data): string
     {
-		return base64_encode($data);
+        return base64_encode($data);
     }	
 }
