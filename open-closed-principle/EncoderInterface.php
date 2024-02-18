@@ -6,5 +6,5 @@ namespace myClasses;
 
 final class EncoderInterface
 {	
-	public function encode(string $data): string;	
+    public function encode(string $data): string;	
 }
