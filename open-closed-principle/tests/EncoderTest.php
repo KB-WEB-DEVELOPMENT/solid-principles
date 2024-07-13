@@ -29,11 +29,11 @@ final class EncoderTest extends TestCase
 
     public function cannotFindEncoder(): void
     {
-        $factory = new EncoderFactory();
+        $this->expectException(InvalidArgumentException::class);
+	    
+	$factory = new EncoderFactory();
 	$encoder = (new GenericEncoder($factory))->createEncoderForFormat('wrong encoder');
 		
 	$str = $encoder->encode('K â m i'); 
-	
-	 $this->expectException(InvalidArgumentException::class);
    }
 }
