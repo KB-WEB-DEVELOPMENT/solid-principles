@@ -7,13 +7,13 @@ namespace myClasses;
 final class GenericEncoder
 {
      public function __construct(
-       private	EncoderFactory $encoderFactory
+    	private	EncoderFactory $encoderFactory
      ){}
 	
      public function encodeString(string $format, string $data): string
      {
         $encoder = $this->encoderFactory->createEncoderForFormat($format);
 
-	return $encoder->encode($data);
+		return $encoder->encode($data);
      }
 }
