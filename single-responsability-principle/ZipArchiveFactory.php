@@ -11,14 +11,14 @@ final class ZipArchiveFactory
 	) {}
 
 	public function openFile(string $filename,int $flags = 0): bool
-        {
+    {
 		$res = $this->zipArchive->open($filename,$flags); // returns bool or int
 			
 		return ($res == true) ? true : false;		
 	}
 
 	public function closeFile(): bool
-        {
+    {
 		$res = $this->zipArchive->close();
 		
 		return $res == true;
